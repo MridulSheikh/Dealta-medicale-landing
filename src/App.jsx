@@ -1,10 +1,36 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
+import Footer from "./components/shared/Footer";
+import Header from "./components/shared/Header";
+import AuthProvider from "./context/Context";
+import Appointments from "./pages/Appointments";
+import Contect from "./pages/Contect";
+import DashBoard from "./pages/DashBoard";
+import Home from "./pages/Home";
+import Service from "./pages/Service";
+import ServiceDeatails from "./pages/ServiceDeatails";
 
 function App() {
   return (
     <div className="App">
-     <h1 className="text-green-700">This doctor portal</h1>
+    <AuthProvider>
+    <BrowserRouter>
+    <Header />
+    <div className="px-5 xl:px-16">
+       <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/apointments" element={<PrivateRoute><Appointments /></PrivateRoute>} />
+          <Route path="/service/:_id" element={<PrivateRoute><ServiceDeatails /></PrivateRoute>} />
+          <Route path="/contect" element={<PrivateRoute><Contect /></PrivateRoute>} />
+          <Route path="/Dashboard" element={<PrivateRoute><DashBoard /></PrivateRoute>} />
+       </Routes>
     </div>
-  );
+    <Footer />
+    </BrowserRouter>
+    </AuthProvider>
+    </div>
+  ); 
 }
 
 export default App;
