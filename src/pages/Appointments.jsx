@@ -28,7 +28,7 @@ const Appointments = () => {
         }
     }
     return (
-        <>
+        <div className='pb-10'>
         <h1 className='text-xl text-primary mt-5 font-semibold'>appointments(<span className='text-gray-700'>{appointment.length}</span>)</h1>
         {
             appointment.length === 0 && <div className='text-2xl font-bold h-screen w-screen text-primary'>
@@ -48,7 +48,7 @@ const Appointments = () => {
                     )
             }
         </div>
-       </>
+       </div>
     );
 };
 

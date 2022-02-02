@@ -46,16 +46,16 @@ export default function Header() {
         </div>
         <div className='hidden xl:flex justify-between align-middle font-semibold'>
         <div className='my-auto'>
-        <NavLink to="/" className="text-primary transition duration-300 hover:bg-primary hover:text-white py-1 px-3 mx-2 rounded-full" activeStyle={activeStyle}>HOME</NavLink>
+        <NavLink to="/" className="py-1 px-3 mx-2 rounded-full" style={({ isActive }) => ({ backgroundColor: isActive ? '#2687B4' : 'white', color: isActive ? 'white' : '#2687B4' })}>HOME</NavLink>
         </div>
         <div className='my-auto'>
-        <NavLink to="/service" className="text-primary transition duration-300 hover:bg-primary hover:text-white py-1 px-3 mx-2 rounded-full" >SERVICE</NavLink>
+        <NavLink to="/service" className="px-3 py-1 mx-2 rounded-full" style={({ isActive }) => ({ backgroundColor: isActive ? '#2687B4' : 'white', color: isActive ? 'white' : '#2687B4' })}>SERVICE</NavLink>
         </div>
            <div className='my-auto'>
-           <NavLink to="/apointments" className="text-primary transition duration-300 hover:bg-primary hover:text-white py-1 px-3 mx-2 rounded-full" >APPOINTMENTS</NavLink>
+           <NavLink to="/apointments" className="py-1 px-3 mx-2 rounded-full" style={({ isActive }) => ({ backgroundColor: isActive ? '#2687B4' : 'white', color: isActive ? 'white' : '#2687B4' })}>APPOINTMENTS</NavLink>
            </div>
            <div className='my-auto'>
-           <NavLink to="/contect" className="text-primary transition duration-300 hover:bg-primary hover:text-white py-1 px-3 mx-2 rounded-full" >CONTECT</NavLink>
+           <NavLink to="/contect" className="py-1 px-3 mx-2 rounded-full" style={({ isActive }) => ({ backgroundColor: isActive ? '#2687B4' : 'white', color: isActive ? 'white' : '#2687B4' })}>CONTECT</NavLink>
            </div>
            
            <div className='my-auto'>
@@ -91,7 +91,7 @@ export default function Header() {
             <button onClick={Logout} className='py-1 w-full text-white bg-primary rounded-full mt-5'>singout</button>
             </div>
             <div className='mt-6 text-gray-700 font-semibold'>
-            <Link to="Dashboard">
+            <Link to="Dashboard/users">
             <p  onClick={() => SetClicked(!clicked)} className='hover:text-primary hover:bg-gray-300 px-4 py-2'><i className="fas fa-tachometer-alt mr-4"></i>Dashboard</p>
             </Link>
             <Link to="Rateus">
@@ -110,7 +110,7 @@ export default function Header() {
             <button onClick={Logout} className='py-3 w-full text-white bg-primary rounded-full mt-5'>singout</button>
             </div>
             <div className='mt-6 text-gray-700 font-semibold'>
-            <Link to="Dashboard">
+            <Link to="Dashboard/users">
             <p  onClick={() => SetClicked(!clicked)} className='hover:text-primary hover:bg-gray-300 px-4 py-2'><i className="fas fa-tachometer-alt mr-4"></i>Dashboard</p>
             </Link>
             <Link to="Rateus">

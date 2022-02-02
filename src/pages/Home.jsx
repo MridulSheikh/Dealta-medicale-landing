@@ -7,7 +7,7 @@ import Platform from '../components/home/Platform'
 
 export default function Home() {
     return (
-        <div>
+        <div className='pb-10'>
            <Banner />
            <BestService/>
            <AskedQuestion />

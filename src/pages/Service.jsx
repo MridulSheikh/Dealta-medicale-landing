@@ -5,7 +5,7 @@ import ServiceBanner from '../components/service/ServiceBanner';
 
 const Service = () => {
     return (
-        <div>
+        <div className='pb-10'>
             <ServiceBanner />
             <OnlineService />
             <OurSpatiality />

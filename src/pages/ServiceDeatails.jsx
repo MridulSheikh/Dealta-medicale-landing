@@ -35,6 +35,7 @@ const ServiceDeatails = () => {
             userEmail : user.email,
             appointment_id : _id,
             status : "Under Revew...",
+            doctor : service.doctor_name
         }
         axios.post('http://localhost:5000/appointment', data)
           .then(function (response) {
@@ -50,7 +51,7 @@ const ServiceDeatails = () => {
     }
 
     return (
-        <div className='mx-0 md:mx-48'>
+        <div className='mx-0 md:mx-48 pb-10'>
         <h1 data-aos="fade-id" className='text-3xl md:text-5xl text-primary font-semibold mt-10 mb-5 md:mb-20 text-center'>{service.name}</h1>
         <div className='grid lg:grid-cols-1 gap-8'>
         <div data-aos="fade-right">
