@@ -15,7 +15,7 @@ const ServiceDeatails = () => {
     const [success, setSuccess] = useState(false)
     const {user} = useAuth()
     useEffect(()=>{
-        const url = `http://localhost:5000/service/${_id}`;
+        const url = `https://ancient-earth-75371.herokuapp.com/service/${_id}`;
        fetch(url)
        .then(res => res.json())
        .then(data => {
@@ -37,7 +37,7 @@ const ServiceDeatails = () => {
             status : "Under Revew...",
             doctor : service.doctor_name
         }
-        axios.post('http://localhost:5000/appointment', data)
+        axios.post('https://ancient-earth-75371.herokuapp.com/appointment', data)
           .then(function (response) {
             console.log(response);
             if(response.statusText === "OK"){

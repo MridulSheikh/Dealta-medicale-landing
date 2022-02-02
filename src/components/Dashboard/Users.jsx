@@ -5,12 +5,12 @@ const Users = () => {
     const [users, setUsers] = useState([]);
     const [email, setEmail] = useState("");
     useEffect(()=>{
-       fetch('http://localhost:5000/users')
+       fetch('https://ancient-earth-75371.herokuapp.com/users')
        .then(res => res.json())
        .then(data => setUsers(data))
     },[])
     const handleSearch = () =>{
-        fetch(`http://localhost:5000/users/${email}`)
+        fetch(`https://ancient-earth-75371.herokuapp.com/users/${email}`)
        .then(res => res.json())
        .then(data => setUsers(data))
     }

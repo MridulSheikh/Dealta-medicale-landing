@@ -6,7 +6,7 @@ import { useState } from 'react/cjs/react.development';
 const AppointmentCard = ({id,_id, cancelAppointment, status}) => {
     const [appointment,setAppointment] = useState({})
     useEffect(()=>{
-       const  url=`http://localhost:5000/service/${id}`
+       const  url=`https://ancient-earth-75371.herokuapp.com/service/${id}`
        console.log(id)
        fetch(url)
        .then(res => res.json())

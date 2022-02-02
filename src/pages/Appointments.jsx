@@ -7,7 +7,7 @@ const Appointments = () => {
     const [appointment, setAppointment] = useState([])
     const {user} = useAuth()
     useEffect(()=>{
-        const url = `http://localhost:5000/appointment/${user.email}`;
+        const url = `https://ancient-earth-75371.herokuapp.com/appointment/${user.email}`;
         fetch(url)
         .then(res => res.json())
         .then(data =>{
@@ -17,7 +17,7 @@ const Appointments = () => {
     const cancelAppointment = (_id) => {
         const proced = window.confirm('are you sure to cancel this Appoinments')
         if(proced){
-            fetch(`http://localhost:5000/appointment/${_id}`,{
+            fetch(`https://ancient-earth-75371.herokuapp.com/appointment/${_id}`,{
                 method: "DELETE"
             })
             .then(res => res.json())

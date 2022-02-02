@@ -10,7 +10,7 @@ const OnlineService = () => {
         Aos.init()
     })
     useEffect(()=>{
-      fetch('http://localhost:5000/service')
+      fetch('https://ancient-earth-75371.herokuapp.com/service')
       .then(res => res.json())
       .then(data => setService(data))
     },[])

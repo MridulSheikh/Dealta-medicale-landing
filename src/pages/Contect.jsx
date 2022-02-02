@@ -14,7 +14,7 @@ const Contect = () => {
             subject, 
             text
         }
-        axios.post('http://localhost:5000/contect', data)
+        axios.post('https://ancient-earth-75371.herokuapp.com/contect', data)
           .then(function (response) {
             console.log(response);
             if(response.statusText === "OK"){

@@ -4,7 +4,7 @@ import MassageCard from './MassageCard';
 const Massage = () => {
     const [massage , setMassage] = useState([]);
     useEffect(()=>{
-         fetch('http://localhost:5000/contect')
+         fetch('https://ancient-earth-75371.herokuapp.com/contect')
          .then(res => res.json(res))
          .then(data => setMassage(data))
     },[])

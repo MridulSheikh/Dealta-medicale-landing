@@ -4,7 +4,7 @@ import AppointmentsCard from './AppointmentsCard';
 const AppointmentReq = () => {
     const [appointment, setAppointment] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/appointment")
+        fetch("https://ancient-earth-75371.herokuapp.com/appointment")
         .then(res => res.json())
         .then(data => setAppointment(data))
     },[])

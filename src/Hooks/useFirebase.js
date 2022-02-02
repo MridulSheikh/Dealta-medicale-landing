@@ -40,7 +40,7 @@ const useFirebase = () => {
 
             const adduser = (email, name) =>{
                 const user ={email, name, staus: "normal"};
-                fetch('http://localhost:5000/users',{
+                fetch('https://ancient-earth-75371.herokuapp.com/users',{
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'
