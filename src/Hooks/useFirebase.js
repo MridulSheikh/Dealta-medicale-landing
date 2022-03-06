@@ -4,7 +4,7 @@ import firebaseInitialize from '../firebase/firebase.init';
 firebaseInitialize()
 const useFirebase = () => {
     const [user, setUser] = useState([]);
-    const  [isLoading, setIsLoading] = useState(false);
+    const  [isLoading, setIsLoading] = useState(true);
     const Googleprovider = new GoogleAuthProvider();
     const auth = getAuth()
     const singinwithGoogle = () =>{

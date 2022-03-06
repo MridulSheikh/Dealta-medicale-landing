@@ -8,7 +8,7 @@ const PrivateRoute = ({ children, ...rest }) => {
     if(isLoading){
       return (
         <div className='w-screen h-screen'>
-        <h1 children="text-5xl text-primary font-semibold">page Loading.....</h1>
+        <h1 className="text-2xl text-primary font-semibold my-36 mx-auto">Loading.....</h1>
         </div>
       ) 
    }

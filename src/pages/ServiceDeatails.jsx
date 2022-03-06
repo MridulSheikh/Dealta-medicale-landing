@@ -1,7 +1,6 @@
 import { data } from 'autoprefixer';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react/cjs/react.development';
 import useAuth from '../Hooks/useAuth';
 import axios from 'axios'
 import Aos from 'aos';
