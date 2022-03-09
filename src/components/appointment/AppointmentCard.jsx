@@ -1,7 +1,6 @@
 import { data } from 'autoprefixer';
 import axios from 'axios';
-import React, { useEffect } from 'react';
-import { useState } from 'react/cjs/react.development';
+import React, { useEffect, useState } from 'react';
 
 const AppointmentCard = ({id,_id, cancelAppointment, status}) => {
     const [appointment,setAppointment] = useState({})

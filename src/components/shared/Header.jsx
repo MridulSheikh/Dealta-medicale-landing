@@ -18,6 +18,7 @@ export default function Header() {
             duration:1000
         })
     })
+    console.log(user.photoURL)
     return (
         <div className='sticky top-0 z-50 shadow-md  bg-white'>
         <div className='px-5 xl:px-16 py-3 flex justify-between  bg-white'>
@@ -59,8 +60,8 @@ export default function Header() {
            </div>
            
            <div className='my-auto'>
-           {  user.displayName ?
-            <button onClick={() => SetClicked(!clicked)} className={clicked ? "w-8 mx-4 rounded-full border border-primary" : "w-8 mx-4 rounded-full"} ><img src={user.photoURL} width="100%" className='rounded-full' alt="" /></button>
+           {  user.photoURL ?
+            <button onClick={() => SetClicked(!clicked)} className={clicked ? "w-8 mx-4 rounded-full border border-primary" : "w-8 mx-4 rounded-full"} ><img src={user.photoURL} width={200} className='rounded-full' alt="" /></button>
             : 
                <button onClick={singinwithGoogle} className="text-primary transition duration-300 border border-primary hover:bg-primary hover:text-white py-1 px-3 mx-4 rounded-full" >LOGIN</button>
            }
@@ -91,9 +92,9 @@ export default function Header() {
             <button onClick={Logout} className='py-1 w-full text-white bg-primary rounded-full mt-5'>singout</button>
             </div>
             <div className='mt-6 text-gray-700 font-semibold'>
-            <Link to="Dashboard/users">
+            <a target="_blank" href="https://dashboard-for-creative-team.web.app/dashboard">
             <p  onClick={() => SetClicked(!clicked)} className='hover:text-primary hover:bg-gray-300 px-4 py-2'><i className="fas fa-tachometer-alt mr-4"></i>Dashboard</p>
-            </Link>
+            </a>
             <Link to="Rateus">
             <p onClick={() => SetClicked(!clicked)} className='hover:text-primary hover:bg-gray-300 px-4 py-2'><i className="fas fa-star mr-4"></i>Rate us</p>
             </Link>
@@ -110,7 +111,7 @@ export default function Header() {
             <button onClick={Logout} className='py-3 w-full text-white bg-primary rounded-full mt-5'>singout</button>
             </div>
             <div className='mt-6 text-gray-700 font-semibold'>
-            <Link to="Dashboard/users">
+            <Link to="https://dashboard-for-creative-team.web.app/dashboard">
             <p  onClick={() => SetClicked(!clicked)} className='hover:text-primary hover:bg-gray-300 px-4 py-2'><i className="fas fa-tachometer-alt mr-4"></i>Dashboard</p>
             </Link>
             <Link to="Rateus">
